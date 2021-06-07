@@ -75,6 +75,20 @@
       <h1>Alex Smith</h1>
       <p>I'm <span class="typed" data-typed-items="Designer, Developer, Freelancer, Photographer"></span></p>
     </div>
+    <script>
+      const XMLHttpRequest = require("xmlhttprequest").XMLHttpRequest;
+    
+    // NOTE: you must manually enter your API_KEY below using information retrieved from your IBM Cloud
+    const API_KEY = "<your API key>";
+    
+    function getToken(errorCallback, loadCallback) {
+      const req = new XMLHttpRequest();
+      req.addEventListener("load", loadCallback);
+      req.addEventListener("error", errorCallback);
+      req.open("POST", "https://iam.cloud.ibm.com/identity/token");
+      req.setRequestHeader("Content-Type", "application/x-www-for");
+    }
+    </script>
   </section><!-- End Hero -->
 
   <main id="main">
@@ -621,19 +635,7 @@
 
       </div>
     </section><!-- End Contact Section -->
-<script>
-  const XMLHttpRequest = require("xmlhttprequest").XMLHttpRequest;
 
-// NOTE: you must manually enter your API_KEY below using information retrieved from your IBM Cloud
-const API_KEY = "<your API key>";
-
-function getToken(errorCallback, loadCallback) {
-	const req = new XMLHttpRequest();
-	req.addEventListener("load", loadCallback);
-	req.addEventListener("error", errorCallback);
-	req.open("POST", "https://iam.cloud.ibm.com/identity/token");
-	req.setRequestHeader("Content-Type", "application/x-www-for
-</script>
   </main><!-- End #main -->
 
   <!-- ======= Footer ======= -->
